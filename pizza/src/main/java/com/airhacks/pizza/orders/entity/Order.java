@@ -42,6 +42,15 @@ public class Order {
     public Order() {
     }
 
+    public String getDesc() {
+        return desc;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+
     public JsonObject toJson() {
         return Json.createObjectBuilder().
                 add("desc", this.desc).
