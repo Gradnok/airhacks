@@ -16,6 +16,7 @@ public class OrdersResource {
 
     @GET
     public JsonArray all() {
+        System.out.println("--- request!");
         try (JsonReader jsonReader = Json.createReader(this.getClass().getResourceAsStream("/orders.json"))) {
             return jsonReader.readArray();
         }

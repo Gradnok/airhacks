@@ -25,7 +25,7 @@ public class OrdersResourceIT {
     @Before
     public void initClient() {
         this.client = ClientBuilder.newClient();
-        this.tut = this.client.target("http://localhost:8080/pizza/resources/orders");
+        this.tut = this.client.target("http://localhost:8484/pizza/resources/orders");
     }
 
     @Test
