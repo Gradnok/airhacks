@@ -1,0 +1,14 @@
+{
+  "name": "pizza-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "echo \"trying to compile\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.17.4"
+  }
+}
