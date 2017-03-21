@@ -2,9 +2,9 @@
 package com.airhacks.pizza.orders.boundary;
 
 import com.airhacks.pizza.orders.entity.Order;
-import java.util.Arrays;
 import java.util.List;
-import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -12,14 +12,17 @@ import javax.annotation.PostConstruct;
  */
 public class OrderProcessor {
 
-    @PostConstruct
-    public void init() {
-        System.out.println("-------order processor.init");
-    }
-
+    @PersistenceContext
+    EntityManager em;
 
     public List<Order> all() {
-        return Arrays.asList(new Order("hot", 1), new Order("sweet", 2));
+        return this.em.
+                createNamedQuery(Order.findAll, Order.class).
+                getResultList();
+    }
+
+    public void save(Order order) {
+        this.em.merge(order);
     }
 
 }
