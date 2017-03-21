@@ -13,3 +13,7 @@ jwt.io
 keycloak.org
 
 https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+https://github.com/AdamBien/docklands
+https://www.haproxy.org
+http://nginx.org
+https://github.com/samolisov/spring-vs-ejb-vs-cdi-benchmark
