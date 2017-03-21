@@ -22,6 +22,7 @@ public class PizzasResource {
     @Resource
     ManagedExecutorService mes;
 
+
     @GET
     public void all(@Suspended AsyncResponse response) {
         response.setTimeout(2, TimeUnit.SECONDS);

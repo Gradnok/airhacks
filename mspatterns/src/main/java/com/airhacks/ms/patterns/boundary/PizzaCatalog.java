@@ -3,6 +3,7 @@ package com.airhacks.ms.patterns.boundary;
 
 import com.airhacks.ms.patterns.control.PizzaOven;
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
 import javax.inject.Inject;
 
 /**
@@ -15,9 +16,13 @@ public class PizzaCatalog {
     @Inject
     PizzaOven oven;
 
-    public String all() {
+    @Inject
+    Event<String> pizzaListeners;
 
-        return "sweet,green,pink" + oven.fire();
+    public String all() {
+        String message = "sweet,green,pink";
+        pizzaListeners.fire(message);
+        return message + oven.fire();
     }
 
 }
