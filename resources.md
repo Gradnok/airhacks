@@ -17,3 +17,4 @@ https://github.com/AdamBien/docklands
 https://www.haproxy.org
 http://nginx.org
 https://github.com/samolisov/spring-vs-ejb-vs-cdi-benchmark
+http://www.hawkular.org/
